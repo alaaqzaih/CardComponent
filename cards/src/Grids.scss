@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+$breakpoint1: 969px;
+$breakpoint2: 700px;
+$Noto-font-path: "../public/NotoSerifTamil_SemiCondensed-Light.ttf";
+
+@font-face {
+    src: url("#{$Noto-font-path}");
+    font-family: "Noto Serif Tamil";
+  
+  }
+
+body{
+    background-color:#f5f5f5;
+    color: black;
+}
+.container{
+    max-width: 1300px;
+    width : 100%;
+    margin: auto;
+    padding: 0px 20px;
+} 
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    padding-top: 20px;
+    font-size: 50px;
+    text-align: center;
+    color: black;
+    margin-bottom : 40px;
+    font-weight: 900;
+    line-height: 1.1em;
+    letter-spacing: -.01em;
+    -webkit-font-smoothing: antialiased;
+    font-family: Noto Serif Tamil;
+    &:after {
+
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 850px;
+        position: absolute;
+        content: ' ';
+        width: 50px;
+        height: 7px;
+        border-radius: 8px;
+        background-color: #f05c24 !important;
+      }
+
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 3px 3px 30px 3px #d7dee7;
+}
+p{
+    color: black;
+    display: block;
+    font-size: 24px;
+    text-align: left;
+    font-family: Noto Serif Tamil;
+    font-weight: 500;
+    line-height: 1.6em;
+        padding-left: 20px;
+    padding-right: 15px;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: .02em;
+}
+h3{
+    font-family: Noto Serif Tamil;
+    padding: 20px 0px 10px 20px ;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2em;
+    -webkit-font-smoothing: antialiased;
+    color: black;
+
+}
+.card{
+    flex: 0 0 calc(50.33% - 20px); 
+    max-width: 1500px ;  
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 500px;
+    
+
+}
+
+
+@media(max-width: $breakpoint1){
+    section{
+        padding: 20px 0px;
+    }
+    h1{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .card{
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+@media(max-width: $breakpoint2){
+    
+    .card{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
