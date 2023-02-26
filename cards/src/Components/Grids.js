@@ -1,7 +1,6 @@
 
-import './Grids.scss'
+import '.././Grids.scss'
 import { useState } from 'react';
-
 function CardComp() {
     const [cards] = useState([
         {
@@ -28,16 +27,15 @@ function CardComp() {
             title : 'Hearing protection ' ,
             text : 'We specialize in hearing protection for recreation and high-noise jobs, with different levels of attenuation and protection available. From custom in-ear monitors to filtered ear plugs, we have multiple options for protection'
         }
-
     ])
     return (
        <div>
         <section>
             <div className="container">
-                {/* <div className='title'></div> */}
-                <h1>What we offer</h1> 
-                {/* <div className="space" ></div> */}
-                <br></br>
+                <div className='heading'>
+                <h1>What we offer </h1> 
+                <div className='space'> </div>
+                </div>
                 <div className="cards">
                     { cards.map((card,i) => (
                         <div key = {i} className="card">
@@ -50,7 +48,6 @@ function CardComp() {
         </section>
        </div>
       );
-
 }
 
 export default CardComp;
