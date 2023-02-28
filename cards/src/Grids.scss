@@ -6,7 +6,6 @@ $Noto-font-path: "../public/NotoSerifTamil_SemiCondensed-Light.ttf";
 @font-face {
     src: url("#{$Noto-font-path}");
     font-family: "Noto Serif Tamil";
-
 }
 * {
     margin: 0;
@@ -38,11 +37,10 @@ body {
     }
 
     .space {
-        margin-left: 460PX;
+        margin-left: 540PX;
         position: relative;
         margin-top: -20px;
         margin-bottom: 20px;
-
         width: 50px;
         height: 7px;
         border-radius: 8px;
@@ -114,7 +112,7 @@ section {
 
     .container {
         .space {
-            margin-left: 290PX;
+            margin-left: 230PX;
         }
     }
 
